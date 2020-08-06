@@ -1,0 +1,23 @@
+Task Eight
+1. The farm animals' classes , i.e. chicken, cow,  pig extend the Animal class.
+The farm animals' classes inherit the value property from the Animal class.
+
+2. Private instance variables cannot be accessed from outside of the class they're defined in (without the help of methods).
+Protected instance variables can be accessed by classes of the same package, as well as subclasses of that class.
+Not every variable is private in this assignment as properties are needed to be accessed/inherited
+by subclasses and manipulated directly.
+
+3. Abstract classes cannot be instantiated directly.
+
+4. The benefit of having the IProductionAnimal Interface is so that we can ensure that specified classes that will implement the
+interface must use the given methods. As classes can only extend one superclass using an interface will ensure that selected classes
+must use the interface methods and provide a form of multiple inheritance.
+
+5. A benefit of making the Animal class an interface would be if you were considering other abstract classes, which the animals themselves (e.g. cow,  chicken, pig) would fit better under. 
+So by making the Animal class an interface it would allow the animals to be seperated into other subclasses if required. This makes use of multiple inheritance where a class can implement as many interfaces as desired.
+Another benefit is when we want to specify the behaviour of a data type, but we don't care who implements the behaviour.
+
+A downfall of changing from an abstract class to an interface is that there is going to be code duplication. For example the getValue method,
+which currently as an inherited method is only required to be specified in the Animal class. Whereas if we were to make it an interface - each
+class that implements the interface would have to reconstruct the getValue method.
+Another foible of changing to an interface would be that the value variable can no longer be included in the interface as it would become static final, which is not ideal for this situation. So would have to be initialised in each individual class, as the value changes per animal.
